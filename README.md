@@ -23,10 +23,13 @@
 | ----------------------- | -----------| ----------- |
 | user                    | references | null: false, foreign_key: true |
 | item_name               | string     | null: false |
-| item_price              | integer    | null: false |
 | item_detail             | text       | null: false |
 | category_id             | integer    | null: false |
 | product_condition_id    | integer    | null: false |
+| delivery_charge_id      | integer    | null: false |
+| prefecture_id           | integer    | null: false |
+| delivery_days_id        | integer    | null: false |
+| item_price              | integer    | null: false |
 ## Association
 - belongs_to : user
 - has_one : order
@@ -37,18 +40,17 @@
 | Column                  | Type       | Options                        |
 | ----------------------- | ---------- | ------------------------------ |
 | user                    | references | null: false, foreign_key: true |
-| items                   | references | null: false, foreign_key: true |
+| item                    | references | null: false, foreign_key: true |
 ## Association
 - belongs_to : user
 - belongs_to : item
-- belongs_to : address
+- has_one : address
 
 ## addresses テーブル
 
 | Column                  | Type       | Options     |
 | ----------------------- | -----------| ----------- |
-| user                    | integer    | null: false, foreign_key: true |
-| name                    | string     | null: false |
+| user                    | references | null: false, foreign_key: true |
 | post_code               | string     | null: false |
 | prefecture_id           | integer    | null: false |
 | city_name               | string     | null: false |
