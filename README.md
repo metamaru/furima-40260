@@ -28,7 +28,7 @@
 | product_condition_id    | integer    | null: false |
 | delivery_charge_id      | integer    | null: false |
 | prefecture_id           | integer    | null: false |
-| delivery_days_id        | integer    | null: false |
+| delivery_day_id         | integer    | null: false |
 | item_price              | integer    | null: false |
 ## Association
 - belongs_to : user
@@ -55,7 +55,7 @@
 | prefecture_id           | integer    | null: false |
 | city_name               | string     | null: false |
 | address                 | string     | null: false |
-| building_name           | string     | null: false |
+| building_name           | string     |             |
 | tell_number             | string     | null: false |
 ## Association
 - belongs_to : order
