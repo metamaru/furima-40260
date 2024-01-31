@@ -40,7 +40,7 @@
 | name       | string     | null: false |
 | post_code  | string     | null: false |
 | address    | string     | null: false |
-| tel_number | string     | null: false |
+| tell_number| string     | null: false |
 
 
 
