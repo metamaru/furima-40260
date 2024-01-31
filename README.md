@@ -22,7 +22,7 @@
 | item_price | string     | null: false |
 | item_detail| text       | null: false |
 | category   | string     | null: false |
-| product_condition| string |null: false |
+| product_condition| string |null: false|
 
 ## orders テーブル
 
