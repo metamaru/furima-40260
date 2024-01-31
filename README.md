@@ -1,24 +1,46 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| nickname           | string | null: false |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false |
+| family_name        | string | null: false |
+| first_name         | string | null: false |
+| family_name_kana   | string | null: false |
+| first_name_kana    | string | null: false |
+| birthday           | string | null: false |
 
-* Ruby version
+## items テーブル
 
-* System dependencies
+| Column     | Type       | Options     |
+| -----------| -----------| ----------- |
+| user_id    | integer    | null: false, foreign_key: true |
+| item_name  | string     | null: false |
+| item_price | string     | null: false |
+| item_detail| text       | null: false |
+| category   | string     | null: false |
+| product_condition| string |null: false |
 
-* Configuration
+## orders テーブル
 
-* Database creation
+| Column    | Type       | Options                        |
+| ----------| ---------- | ------------------------------ |
+| user_id   | integer    | null: false, foreign_key: true |
+| items_id  | integer    | null: false, foreign_key: true |
+| pay_method| references | null: false, foreign_key: true |
 
-* Database initialization
+## addresses テーブル
 
-* How to run the test suite
+| Column     | Type       | Options     |
+| -----------| -----------| ----------- |
+| user_id    | integer    | null: false, foreign_key: true |
+| name       | string     | null: false |
+| post_code  | string     | null: false |
+| address    | string     | null: false |
+| tel_number | string     | null: false |
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
