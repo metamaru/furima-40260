@@ -50,7 +50,6 @@
 
 | Column                  | Type       | Options     |
 | ----------------------- | -----------| ----------- |
-| user                    | references | null: false, foreign_key: true |
 | order                   | references | null: false, foreign_key: true |
 | post_code               | string     | null: false |
 | prefecture_id           | integer    | null: false |
