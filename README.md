@@ -24,6 +24,7 @@
 | category   | string     | null: false |
 | product_condition| string |null: false|
 
+
 ## orders テーブル
 
 | Column    | Type       | Options                        |
@@ -41,6 +42,3 @@
 | post_code  | string     | null: false |
 | address    | string     | null: false |
 | tell_number| string     | null: false |
-
-
-
