@@ -12,19 +12,19 @@ RSpec.describe User, type: :model do
         expect(@user).to be_valid
       end
       it 'お名前(全角)は、名字を全角(漢字・ひらがな・カタカナ)で入力すると登録できる' do
-        @user.family_name = '山田'
+        @user.family_name = 'やマ田'
         expect(@user).to be_valid
       end
       it 'お名前(全角)は、名前を全角(漢字・ひらがな・カタカナ)で入力すると登録できる' do
         @user.first_name = '太ろウ'
         expect(@user).to be_valid
       end
-      it 'お名前カナ(全角)は、名字を全角(漢字・ひらがな・カタカナ)で入力すると登録できる' do
-        @user.family_name_kana = 'ﾔﾏﾀﾞ'
+      it 'お名前カナ(全角)は、名字を全角(カタカナ)で入力すると登録できる' do
+        @user.family_name_kana = 'ヤマダ'
         expect(@user).to be_valid
       end
-      it 'お名前カナ(全角)は、名前を全角(漢字・ひらがな・カタカナ)で入力すると登録できる' do
-        @user.first_name = 'ﾀﾛｳ'
+      it 'お名前カナ(全角)は、名前を全角(カタカナ)で入力すると登録できる' do
+        @user.first_name = 'タロウ'
         expect(@user).to be_valid
       end
     end
