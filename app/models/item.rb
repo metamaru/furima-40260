@@ -29,6 +29,6 @@ class Item < ApplicationRecord
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :delivery_day
 
-  validates :item_price, format: { with: /\A[0-9]+\z/ }
+  validates_numericality_of :item_price, only_integegr: true
   validates :item_price, numericality: { in: 300..9_999_999 }
 end
