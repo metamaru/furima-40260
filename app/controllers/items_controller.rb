@@ -20,7 +20,10 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    puts @item.inspect
+  end
+
+  def edit
+    @item = Item.find(params[:id])
   end
 
   private
