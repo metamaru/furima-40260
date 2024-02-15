@@ -8,5 +8,6 @@ FactoryBot.define do
     address { Faker::Address.street_address}
     building_name { Faker::Address.street_address}
     tell_number { "0#{rand(1..9)}#{rand(10**8..10**9-1)}" }
+    token { "tok_abcdefghijk00000000000000000"}
   end
 end
