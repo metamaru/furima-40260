@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   def index
     gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
     @order_form = OrderForm.new
-
+    redirect_to root_path unless current_user.id != @item.user.id && @item.order.nil?
   end
 
   def create
@@ -26,7 +26,7 @@ class OrdersController < ApplicationController
 
   def non_purchased_item
     @item = Item.find(params[:item_id])
-    redirect_to root_path unless @item && (current_user.id != @item.user_id || !@item.orders.present?)
+    redirect_to new_user_session_path unless @item && current_user && (current_user.id != @item.user_id || !@item.orders.present?)
   end
 
   def pay_item
