@@ -26,7 +26,7 @@ class OrdersController < ApplicationController
 
   def non_purchased_item
     @item = Item.find(params[:item_id])
-    redirect_to new_user_session_path unless @item && current_user && (current_user.id != @item.user_id || !@item.orders.present?)
+    redirect_to new_user_session_path unless @item && current_user && (current_user.id != @item.user_id || !@item.order.present?)
   end
 
   def pay_item
