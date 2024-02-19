@@ -1,5 +1,5 @@
 function calculate() {
-  var priceInput = document.getElementById("item_price").value;
+  var priceInput = document.getElementById("itemPrice").value;
   if (priceInput === "") {
     // 入力フィールドが空の場合は計算せず、空文字列を表示する
     document.getElementById("add-tax-price").innerText = "";
