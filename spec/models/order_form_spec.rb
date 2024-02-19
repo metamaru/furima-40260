@@ -59,6 +59,11 @@ RSpec.describe OrderForm, type: :model do
         @order_form.valid?
         expect(@order_form.errors.full_messages).to include('Tell number is invalid. Include hyphen(-)')
       end
+      it '電話番号に半角数字以外が含まれている場合、保存できない' do
+        @order_form.tell_number = '０９０１２３４５６７８９'
+        @order_form.valid?
+        expect(@order_form.errors.full_messages).to include('Tell number is invalid. Include hyphen(-)')
+      end
       it 'userが紐づいていないと保存できない' do
         @order_form.user_id = ''
         @order_form.valid?
