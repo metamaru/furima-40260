@@ -63,3 +63,4 @@ production:
   database: furima_40260_production
   username: furima_40260
   password: <%= ENV["FURIMA_40260_DATABASE_PASSWORD"] %>
+  host: localhost

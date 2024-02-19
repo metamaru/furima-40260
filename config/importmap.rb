@@ -5,4 +5,5 @@ pin '@hotwired/turbo-rails', to: 'turbo.min.js', preload: true
 pin '@hotwired/stimulus', to: 'stimulus.min.js'
 pin '@hotwired/stimulus-loading', to: 'stimulus-loading.js'
 pin_all_from 'app/javascript/controllers', under: 'controllers'
-pin 'fee', to: 'fee.js'
+pin "calculation", to: "calculation.js"
+pin "card", to: "card.js"
