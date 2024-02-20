@@ -12,6 +12,6 @@ window.addEventListener('turbo:load',() => {
 
   const profit = document.getElementById("profit")
   const taxValue = inputValue * 0.1
-  profit.innerHTML = (Math.floor(inoutValue - taxValue));
+  profit.innerHTML = (Math.floor(inputValue - taxValue));
   });
 });
